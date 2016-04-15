@@ -2,12 +2,15 @@
 
 function toInt(num) { return parseInt(num, 10); }
 
+function parseArgs(input) {
+  var numArgs = input.length;
+  return input.slice(2, numArgs).map(toInt);
+}
+
 // Read command line arguments
-var args = process.argv,
-    n = args.length;
+var numbers = parseArgs(process.argv);
 
-var numbers = args.slice(2, n).map(toInt);
-
+// Compute the sum of the numbers
 var sum = numbers.reduce(function(total, num) {
   return total + num;
 }, 0);
