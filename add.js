@@ -1,13 +1,17 @@
 #!/usr/local/bin/node
 
-function toInt(num) { return parseInt(num, 10); }
+// Convers the input argument to an integer
+function toInt(num) {
+  return parseInt(num, 10);
+}
 
+// Parse the input arguments
 function parseArgs(input) {
   var numArgs = input.length;
   return input.slice(2, numArgs).map(toInt);
 }
 
-// Read command line arguments
+// Read and parse command line arguments
 var numbers = parseArgs(process.argv);
 
 // Compute the sum of the numbers
