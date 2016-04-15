@@ -5,11 +5,12 @@ var args = process.argv,
 
 function toInt(num) { return parseInt(num, 10); }
 
-
 var numbers = args.slice(2, n).map(toInt);
 
-var total = numbers.reduce(function(sum, num) {
-  return sum + num;
-}, 0);
+// Adding numbers iterating
+var sum = 0;
+for (var k = 0, m = numbers.length; k < m; k += 1) {
+  sum += numbers[k];
+}
 
-console.log(total);
+console.log(sum);
