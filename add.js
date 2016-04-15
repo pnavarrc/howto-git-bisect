@@ -1,4 +1,12 @@
 
-var args = process.argv;
+// Read command line arguments
+var args = process.argv,
+    n = args.length;
 
-console.log(args);
+var numbers = args.slice(1, n).map(Number);
+
+var sum = numbers.reduce(function(sum, num) {
+  return sum + num;
+}, 0);
+
+console.log(sum);
