@@ -5,8 +5,8 @@ var args = process.argv,
 
 var numbers = args.slice(1, n).map(Number);
 
-var sum = numbers.reduce(function(sum, num) {
+var total = numbers.reduce(function(sum, num) {
   return sum + num;
 }, 0);
 
-console.log(sum);
+console.log(total);
