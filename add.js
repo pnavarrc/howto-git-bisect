@@ -1,3 +1,4 @@
+#!/usr/local/bin/node
 
 function toInt(num) { return parseInt(num, 10); }
 
