@@ -15,7 +15,7 @@ Git uses the [bisection algorithm](https://en.wikipedia.org/wiki/Bisection_metho
 
 | Step 1   | Step 2   | Step 3   | Step 4   | Step 5   | Step 6   | Step 7   |
 |----------|----------|----------|----------|----------|----------|----------|
-| `4a4e` :anguished: |     |          |          |          |          |          |
+| `4a4e` :bomb: |     |          |          |          |          |          |
 | `cfaf`   |          |          |          |          |          |          |
 | `e6f1`   |          |          |          |          |          |          |
 | `77ca`   |          |          |          |          |          |          |
@@ -28,19 +28,19 @@ Git uses the [bisection algorithm](https://en.wikipedia.org/wiki/Bisection_metho
 | `09af`   |          |          |          |          |          |          |
 | `6d3b`   |          |          |          |          |          |          |
 | `0219`   |          |          |          |          |          |          |
-| `34a1` ? | `34a1` :anguished: | `34a1` :anguished: |          |          |          |          |
+| `34a1` ? | `34a1` :bomb: | `34a1` :bomb: |          |          |          |          |
 | `1054`   | `1054`   | `1054`   |          |          |          |          |
 | `bcab`   | `bcab`   | `bcab`   |          |          |          |          |
-| `4ae6`   | `4ae6`   | `4ae6` ? | `4ae6` :anguished: |          |          |          |
+| `4ae6`   | `4ae6`   | `4ae6` ? | `4ae6` :bomb: |          |          |          |
 | `7d75`   | `7d75`   | `7d75`   | `7d75`   |          |          |          |
-| `e079`   | `e079`   | `e079`   | `e079` ? | `e079` :anguished: | `e079` :anguished: | `e079` :sunglasses: |
-| `8013`   | `8013`   | `8013`   | `8013`   | `8013` ? | `801e` :smiley: |          |
-| `7487`   | `7487` ? | `7487` :smiley: | `7487` :smiley: | `7487` :smiley: |         |          |
+| `e079`   | `e079`   | `e079`   | `e079` ? | `e079` :bomb: | `e079` :bomb: | `e079` :sunglasses: |
+| `8013`   | `8013`   | `8013`   | `8013`   | `8013` ? | `801e` :sunny: |          |
+| `7487`   | `7487` ? | `7487` :sunny: | `7487` :sunny: | `7487` :sunny: |         |          |
 | `f3b2`   | `f3b2`   |          |          |          |          |          |
 | `b12a`   | `b12a`   |          |          |          |          |          |
 | `2dac`   | `2dac`   |          |          |          |          |          |
 | `1ed8`   | `1ed8`   |          |          |          |          |          |
-| `f8a4` :smiley: | `f8a4` :smiley: |          |          |          |          |          |
+| `f8a4` :sunny: | `f8a4` :sunny: |          |          |          |          |          |
 | `...`    |          |          |          |          |          |          |  
 
 
