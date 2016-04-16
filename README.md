@@ -7,7 +7,7 @@ Find the change that introduced a bug in your code.
 
 | Step 1   | Step 2   | Step 3   | Step 4   | Step 5   | Step 6   | Step 7   |
 |----------|----------|----------|----------|----------|----------|----------|
-| `4a4e` :bomb: |     |          |          |          |          |          |
+| `4a4e` :anguished: |     |          |          |          |          |          |
 | `cfaf`   |          |          |          |          |          |          |
 | `e6f1`   |          |          |          |          |          |          |
 | `77ca`   |          |          |          |          |          |          |
@@ -22,19 +22,19 @@ Find the change that introduced a bug in your code.
 | `09af`   |          |          |          |          |          |          |
 | `6d3b`   |          |          |          |          |          |          |
 | `0219`   |          |          |          |          |          |          |
-| `34a1` ? | `34a1` :bomb: | `34a1` :bomb: |          |          |          |          |
+| `34a1` ? | `34a1` :anguished: | `34a1` :anguished: |          |          |          |          |
 | `1054`   | `1054`   | `1054`   |          |          |          |          |
 | `bcab`   | `bcab`   | `bcab`   |          |          |          |          |
-| `4ae6`   | `4ae6`   | `4ae6` ? | `4ae6` :bomb: |          |          |          |
+| `4ae6`   | `4ae6`   | `4ae6` ? | `4ae6` :anguished: |          |          |          |
 | `7d75`   | `7d75`   | `7d75`   | `7d75`   |          |          |          |
-| `e079`   | `e079`   | `e079`   | `e079` ? | `e079` :bomb: | `e079` :bomb: | `e079` :bomb: |
-| `8013`   | `8013`   | `8013`   | `8013`   | `8013` ? | `801e` :smiley_cat: |          |
-| `7487`   | `7487` ? | `7487` :smiley_cat: | `7487` :smiley_cat: | `7487` :smiley_cat: |         |          |
+| `e079`   | `e079`   | `e079`   | `e079` ? | `e079` :anguished: | `e079` :anguished: | `e079` :sunglasses: |
+| `8013`   | `8013`   | `8013`   | `8013`   | `8013` ? | `801e` :smiley: |          |
+| `7487`   | `7487` ? | `7487` :smiley: | `7487` :smiley: | `7487` :smiley: |         |          |
 | `f3b2`   | `f3b2`   |          |          |          |          |          |
 | `b12a`   | `b12a`   |          |          |          |          |          |
 | `301f`   | `301f`   |          |          |          |          |          |
 | `5151`   | `5151`   |          |          |          |          |          |
 | `2dac`   | `2dac`   |          |          |          |          |          |
 | `1ed8`   | `1ed8`   |          |          |          |          |          |
-| `f8a4` :smiley_cat: | `f8a4` :smiley_cat: |          |          |          |          |          |
+| `f8a4` :smiley: | `f8a4` :smiley: |          |          |          |          |          |
 | `...`    |          |          |          |          |          |          |  
