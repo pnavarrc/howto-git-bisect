@@ -10,7 +10,7 @@ You notice that in the most recent commit (let’s say `4a4e`), a feature is not
 
 ## How does it work?
 
-Git uses the bisection algorithm to help you search the offending commit. To start, you need to mark a `bad` commit and a `good` commit, git will checkout a commit in the middle for you to test. Then you mark it either as `good` or `bad`, and then the process starts again.
+Git uses the [bisection algorithm](https://en.wikipedia.org/wiki/Bisection_method) to help you search the offending commit. To start, you need to mark a `bad` commit and a `good` commit, git will checkout a commit in the middle for you to test. Then you mark it either as `good` or `bad`, and then the process starts again.
 
 
 | Step 1   | Step 2   | Step 3   | Step 4   | Step 5   | Step 6   | Step 7   |
@@ -105,3 +105,8 @@ index f1110f6..d7fc703 100755
 ```
 
 Then you fix the bug, commit and push. Done :sunglasses:
+
+## Read More
+
+- [Bisection Algorithm](https://en.wikipedia.org/wiki/Bisection_method)
+- [Git Bisect Docs](https://git-scm.com/docs/git-bisect)
