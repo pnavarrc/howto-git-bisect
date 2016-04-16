@@ -19,5 +19,4 @@ var sum = integers.reduce(function(total, num) {
   return total + num;
 }, 0);
 
-
 console.log(sum);
