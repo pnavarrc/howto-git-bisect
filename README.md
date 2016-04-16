@@ -1,14 +1,14 @@
-# How to use `git bisect`
+# How to Use `git bisect`
 
-Find the change that introduced a bug in your code.
+> Find the change that introduced a bug in your code.
 
-The `git bisect` command helps you to find which change introduced a bug in your code. It’s easy and quick, but most people don’t know about it.
+The [`git bisect`](https://git-scm.com/docs/git-bisect) command helps you to find which change introduced a bug in your code. It’s easy and quick, but most people don’t know about it.
 
-## The problem
+## The Problem
 
 You notice that in the most recent commit (let’s say `4a4e`), a feature is not working, and you remember than at some point in the past (let’s say commit `f8a4`) is was working just fine. The task is to find out which commit introduced the bug.
 
-## How does it work?
+## The Solution: Git Bisect
 
 Git uses the [bisection algorithm](https://en.wikipedia.org/wiki/Bisection_method) to help you search the offending commit. To start, you need to mark a `bad` commit and a `good` commit, git will checkout a commit in the middle for you to test. Then you mark it either as `good` or `bad`, and then the process starts again.
 
@@ -44,36 +44,45 @@ Git uses the [bisection algorithm](https://en.wikipedia.org/wiki/Bisection_metho
 | `...`    |          |          |          |          |          |          |  
 
 
-## Demo
+## Example
 
 To start the process, just invoke `git bisect start` and mark the commit as `bad`, and mark a commit that was working `f8a4` as `good`.
 
-```bash
+```
 (4a4e) $ git bisect start
 (4a4e) $ git bisect bad
 (4a4e) $ git bisect good f8a4
 
 Bisecting: 7 revisions left to test after this (roughly 3 steps)
-[cae5ba2ea747fc29dd234bb0ae51d8ad79096153] Rename function
+[cae5] Rename function
+```
 
+Git will checkout a commit in the middle, you need to test your code to see if this version is working:
+
+```bash
 (cae5) $ node add.js 1 2 3  // 6
 (cae5) $  git bisect good
 
 Bisecting: 7 revisions left to test after this (roughly 3 steps)
-[cae5ba2ea747fc29dd234bb0ae51d8ad79096153] Rename function
+[0bca] Rename function
+```
 
+Git will checkout a version in the middle, you test again and mark it as good or bad. After a couple of steps, you will find the offending commit:
+
+
+```bash
 # 3 or 4 steps later ...
 
 $ git bisect bad
 
-5e3c5e2e94836a2571a88e89f019ffc65a00293e is the first bad commit
-commit 5e3c5e2e94836a2571a88e89f019ffc65a00293e
-Author: Pablo Navarro Castillo <pnavarrc@gmail.com>
+5e3c is the first bad commit
+commit 5e3c
+Author: Pablo Navarro Castillo <pnavarrc@gmail.com>  // <- me :blush:
 Date:   Sat Apr 16 11:02:21 2016 -0300
 
     read all input arguments
 
-:100755 100755 f1110f6f59f0d9bd5e9db8513bd5330d44831ff9 d7fc70346dac9ebce564bef4e82f9fa78a819902 M	add.js
+:100755 100755 f111 d7fc M	add.js
 
 $ git reset
 ```
@@ -83,7 +92,7 @@ Now that we know which commit is the bad one, we can look at the diff to see wha
 ```
 $ git show 5e3c5e
 
-commit 5e3c5e2e94836a2571a88e89f019ffc65a00293e
+commit 5e3c
 Author: Pablo Navarro Castillo <pnavarrc@gmail.com>
 Date:   Sat Apr 16 11:02:21 2016 -0300
 
@@ -104,7 +113,7 @@ index f1110f6..d7fc703 100755
  // Read and parse command line arguments
 ```
 
-Then you fix the bug, commit and push. Done :sunglasses:
+The next step is to fix the bug, commit and :shipit:
 
 ## Read More
 
