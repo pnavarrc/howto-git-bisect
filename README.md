@@ -77,3 +77,31 @@ Date:   Sat Apr 16 11:02:21 2016 -0300
 
 $ git reset
 ```
+
+Now that we know which commit is the bad one, we can look at the diff to see what changed:
+
+```
+$ git show 5e3c5e
+
+commit 5e3c5e2e94836a2571a88e89f019ffc65a00293e
+Author: Pablo Navarro Castillo <pnavarrc@gmail.com>
+Date:   Sat Apr 16 11:02:21 2016 -0300
+
+    read all input arguments
+
+diff --git a/add.js b/add.js
+index f1110f6..d7fc703 100755
+--- a/add.js
++++ b/add.js
+@@ -8,7 +8,7 @@ function toInt(num) {
+ // Parse the input arguments
+ function readNumbers(input) {
+   var numArgs = input.length;
+-  return input.slice(2, numArgs).map(toInt);
++  return input.slice(1, numArgs).map(toInt);
+ }
+
+ // Read and parse command line arguments
+```
+
+Then you fix the bug, commit and push. Done :sunglasses:
