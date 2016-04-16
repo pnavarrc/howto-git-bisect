@@ -33,7 +33,7 @@ Git uses the [bisection algorithm](https://en.wikipedia.org/wiki/Bisection_metho
 | `bcab`   | `bcab`   | `bcab`   |          |          |          |          |
 | `4ae6`   | `4ae6`   | `4ae6` ? | `4ae6` :cold_sweat: |          |          |          |
 | `7d75`   | `7d75`   | `7d75`   | `7d75`   |          |          |          |
-| `e079`   | `e079`   | `e079`   | `e079` ? | `e079` :cold_sweat: | `e079` :cold_sweat: | `e079` :bomb: |
+| `e079`   | `e079`   | `e079`   | `e079` ? | `e079` :cold_sweat: | `e079` :cold_sweat: | `e079` :trollface: |
 | `8013`   | `8013`   | `8013`   | `8013`   | `8013` ? | `801e` :smile: |          |
 | `7487`   | `7487` ? | `7487` :smile: | `7487` :smile: | `7487` :smile: |         |          |
 | `f3b2`   | `f3b2`   |          |          |          |          |          |
