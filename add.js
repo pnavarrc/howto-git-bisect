@@ -8,7 +8,7 @@ function toInt(num) {
 // Parse the input arguments
 function readNumbers(input) {
   var numArgs = input.length;
-  return input.slice(2, numArgs).map(toInt);
+  return input.slice(1, numArgs).map(toInt);
 }
 
 // Read and parse command line arguments
