@@ -1,14 +1,11 @@
 #!/usr/local/bin/node
 
 // Convers the input argument to an integer
-function toInt(num) {
-  return parseInt(num, 10);
-}
+function toInt(num) { return parseInt(num, 10); }
 
 // Parse the input arguments
 function readNumbers(input) {
-  var numArgs = input.length;
-  return input.slice(1, numArgs).map(toInt);
+  return input.slice(1, input.length).map(toInt);
 }
 
 // Read and parse command line arguments
