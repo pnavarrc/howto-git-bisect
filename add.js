@@ -12,10 +12,10 @@ function readNumbers(input) {
 }
 
 // Read and parse command line arguments
-var numbers = readNumbers(process.argv);
+var integers = readNumbers(process.argv);
 
 // Compute the sum of the numbers
-var sum = numbers.reduce(function(total, num) {
+var sum = integers.reduce(function(total, num) {
   return total + num;
 }, 0);
 
