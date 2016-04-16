@@ -6,7 +6,7 @@ function toInt(num) {
 }
 
 // Parse the input arguments
-function parseArgs(input) {
+function readNumbers(input) {
   var numArgs = input.length;
   return input.slice(2, numArgs).map(toInt);
 }
