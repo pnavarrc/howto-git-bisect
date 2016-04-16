@@ -1,8 +1,33 @@
-# How to use ´git bisect´
+# How to use `git bisect`
 
 Find the change that introduced a bug in your code.
 
+The `git bisect` command helps you to find which change introduced a bug in your code. It’s easy and quick, but most people don’t know about it.
+
+## The problem
+
+You notice that in the most recent commit (let’s say `4a4e`), a feature is not working, and you remember than at some point in the past (let’s say commit `f8a4`) is was working just fine. The task is to find out which commit introduced the bug.
+
 ## How does it work?
+
+Git uses the bisection algorithm to help you search the offending commit. To start, you need to mark a `bad` commit and a `good` commit, git will checkout a commit in the middle for you to test. Then you mark it either as `good` or `bad`, and then the process starts again.
+
+## How?
+
+Just checkout the bad commit (`4a4e`) and start `git bisect`:
+
+```bash
+(4a4e) $ git bisect start
+(4a4e) $ git bisect bad
+(4a4e) $ git bisect good f8a4
+```
+
+
+
+
+
+
+
 
 
 | Step 1   | Step 2   | Step 3   | Step 4   | Step 5   | Step 6   | Step 7   |
