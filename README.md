@@ -73,7 +73,7 @@ Git will checkout a version in the middle, you test again and mark it as good or
 ```bash
 # 3 or 4 steps later ...
 
-$ git bisect bad
+(90d0) $ git bisect bad
 
 5e3c is the first bad commit
 commit 5e3c
@@ -84,7 +84,7 @@ Date:   Sat Apr 16 11:02:21 2016 -0300
 
 :100755 100755 f111 d7fc M	add.js
 
-$ git reset
+(5e3c) $ git reset
 ```
 
 Now that we know which commit is the bad one, we can look at the diff to see what changed:
