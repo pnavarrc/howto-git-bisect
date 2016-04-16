@@ -56,15 +56,16 @@ To start the process, just invoke `git bisect start` and mark the commit as `bad
 Bisecting: 7 revisions left to test after this (roughly 3 steps)
 [cae5ba2ea747fc29dd234bb0ae51d8ad79096153] Rename function
 
-(cae5) $ node add.js 1 2 3
-  6
+(cae5) $ node add.js 1 2 3  // 6
 (cae5) $  git bisect good
+
 Bisecting: 7 revisions left to test after this (roughly 3 steps)
 [cae5ba2ea747fc29dd234bb0ae51d8ad79096153] Rename function
 
-// 3 or 4 steps later ...
+# 3 or 4 steps later ...
 
 $ git bisect bad
+
 5e3c5e2e94836a2571a88e89f019ffc65a00293e is the first bad commit
 commit 5e3c5e2e94836a2571a88e89f019ffc65a00293e
 Author: Pablo Navarro Castillo <pnavarrc@gmail.com>
