@@ -13,35 +13,34 @@ You notice that in the most recent commit (let’s say `4a4e`), a feature is not
 Git uses the [bisection algorithm](https://en.wikipedia.org/wiki/Bisection_method) to help you search the offending commit. To start, you need to mark a `bad` commit and a `good` commit, git will checkout a commit in the middle for you to test. Then you mark it either as `good` or `bad`, and then the process starts again.
 
 
-| Step 1   | Step 2   | Step 3   | Step 4   | Step 5   | Step 6   | Step 7   |
-|----------|----------|----------|----------|----------|----------|----------|
-| `4a4e` :cold_sweat: |     |          |          |          |          |          |
-| `cfaf`   |          |          |          |          |          |          |
-| `e6f1`   |          |          |          |          |          |          |
-| `77ca`   |          |          |          |          |          |          |
-| `1642`   |          |          |          |          |          |          |
-| `4ba6`   |          |          |          |          |          |          |
-| `7e56`   |          |          |          |          |          |          |
-| `397b`   |          |          |          |          |          |          |
-| `7eb5`   |          |          |          |          |          |          |
-| `4203`   |          |          |          |          |          |          |
-| `09af`   |          |          |          |          |          |          |
-| `6d3b`   |          |          |          |          |          |          |
-| `0219`   |          |          |          |          |          |          |
-| `34a1` ? | `34a1` :cold_sweat: | `34a1` :cold_sweat: |          |          |          |          |
-| `1054`   | `1054`   | `1054`   |          |          |          |          |
-| `bcab`   | `bcab`   | `bcab`   |          |          |          |          |
-| `4ae6`   | `4ae6`   | `4ae6` ? | `4ae6` :cold_sweat: |          |          |          |
-| `7d75`   | `7d75`   | `7d75`   | `7d75`   |          |          |          |
-| `e079`   | `e079`   | `e079`   | `e079` ? | `e079` :cold_sweat: | `e079` :cold_sweat: | `e079` :trollface: |
-| `8013`   | `8013`   | `8013`   | `8013`   | `8013` ? | `801e` :smile: |          |
-| `7487`   | `7487` ? | `7487` :smile: | `7487` :smile: | `7487` :smile: |         |          |
-| `f3b2`   | `f3b2`   |          |          |          |          |          |
-| `b12a`   | `b12a`   |          |          |          |          |          |
-| `2dac`   | `2dac`   |          |          |          |          |          |
-| `1ed8`   | `1ed8`   |          |          |          |          |          |
-| `f8a4` :smile: | `f8a4` :smile: |          |          |          |          |          |
-| `...`    |          |          |          |          |          |          |  
+We start by identifying a good (`900d`) and a bad (`bad0`) commit
+
+![step1](img/git-bisect-1.png)
+
+Git will keep the commits that are both descendants of the good commit and ancestors of the bad commit, which will leave us with a smaller graph to work with.
+
+![step2](img/git-bisect-2.png)
+
+Git chooses a commit between the good and bad commits. As this is a directed acyclic graph, there is no commit “in the middle”, git chooses the commit that will provide more information once tested.
+
+![step3](img/git-bisect-3.png)
+
+Now we need to test this commit as being good or bad. Let’s say it was bad, we mark it as such and git proposes a new commit to be tested. The graph now is smaller.
+
+![step4](img/git-bisect-4.png)
+
+We test this commit as well (let’s say it was good). In this case, the upper branch is removed from the commits to test, as we are under the assumption that only **one** commit introduced the bug.
+
+![step5](img/git-bisect-5.png)
+
+We test the next commit (it was good) and git proposes the last comit to be tested.
+
+![step6](img/git-bisect-6.png)
+
+
+We test this last commit and we are done, the first bad commit was `b3fd`.
+
+![step7](img/git-bisect-7.png)
 
 
 ## Example
@@ -115,7 +114,8 @@ index f1110f6..d7fc703 100755
 
 The next step is to fix the bug, commit and :shipit:
 
-## Read More
+## Learn more
 
-- [Bisection Algorithm](https://en.wikipedia.org/wiki/Bisection_method)
-- [Git Bisect Docs](https://git-scm.com/docs/git-bisect)
+- [How to use Git Bisect — Pablo Navarro, JSConf UY 2016 (YouTube)](https://youtu.be/R6F6lnbnNbc?t=14m57s)
+- [Git Bisect Documentation](https://git-scm.com/docs/git-bisect)
+- [Paper on Git Bisect (lk 2009)](https://git-scm.com/docs/git-bisect-lk2009.html)
