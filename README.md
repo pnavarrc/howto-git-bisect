@@ -1,6 +1,8 @@
 # How to Use `git bisect`
 
-> Find the change that introduced a bug in your code.
+<a href="https://zenhub.com"><img src="https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png"></a>
+
+Find the change that introduced a bug in your code, **quickly**.
 
 The [`git bisect`](https://git-scm.com/docs/git-bisect) command helps you to find which change introduced a bug in your code. It’s easy and quick, but most people don’t know about it.
 
