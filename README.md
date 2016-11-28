@@ -8,7 +8,7 @@ The [`git bisect`](https://git-scm.com/docs/git-bisect) command helps you to fin
 
 ## The Problem
 
-You notice that in the most recent commit (let’s say `4a4e`), a feature is not working, and you remember than at some point in the past (let’s say commit `f8a4`) is was working just fine. The task is to find out which commit introduced the bug.
+You notice that in the most recent commit (let’s say `4a4e`), a feature is not working, and you remember that at some point in the past (let’s say commit `f8a4`) it was working just fine. The task is to find out which commit introduced the bug.
 
 ## The Solution: Git Bisect
 
