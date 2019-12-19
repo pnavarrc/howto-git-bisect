@@ -83,7 +83,7 @@ Date:   Sat Apr 16 11:02:21 2016 -0300
 
 :100755 100755 f111 d7fc M	add.js
 
-(5e3c) $ git reset
+(5e3c) $ git bisect reset
 ```
 
 Now that we know which commit is the bad one, we can look at the diff to see what changed:
